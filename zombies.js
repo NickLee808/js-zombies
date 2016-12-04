@@ -44,8 +44,6 @@ class Weapon extends Item{
  * -----------------------------
  */
 
-
-
 /**
  * Class => Food(name, energy)
  * -----------------------------
@@ -62,6 +60,12 @@ class Weapon extends Item{
  * @property {number} energy
  */
 
+class Food extends Item{
+  constructor(name, energy){
+    super(name);
+    this.energy = energy;
+  }
+}
 
 /**
  * Food Extends Item Class
@@ -91,6 +95,7 @@ class Weapon extends Item{
  * @property {method} getPack              Returns private variable `pack`.
  * @property {method} getMaxHealth         Returns private variable `maxHealth`.
  */
+
 
 
 /**
