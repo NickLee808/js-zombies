@@ -126,9 +126,9 @@ class Player{
    * @name checkPack
    */
 
-   checkPack(){
+  checkPack(){
     console.log(this._pack.toString());
-   }
+  }
 
   /**
    * Player Class Method => takeItem(item)
@@ -215,17 +215,17 @@ class Player{
    * @param {Weapon} itemToEquip  The weapon item to equip.
    */
 
-    equip(itemToEquip){
-      if (itemToEquip instanceof Weapon && this._pack.indexOf(itemToEquip) !== -1 ){
-        if (this.equipped){
-          this._pack.push(this.equipped); 
-        }
-        this._pack.splice(this._pack.indexOf(itemToEquip), 1);
-        this.equipped = itemToEquip;
-      }else{
-        console.log(this.name + " cannot equip " + itemToEquip + ".");
+  equip(itemToEquip){
+    if (itemToEquip instanceof Weapon && this._pack.indexOf(itemToEquip) !== -1 ){
+      if (this.equipped){
+        this._pack.push(this.equipped); 
       }
+      this._pack.splice(this._pack.indexOf(itemToEquip), 1);
+      this.equipped = itemToEquip;
+    }else{
+      console.log(this.name + " cannot equip " + itemToEquip + ".");
     }
+  }
 
   /**
    * Player Class Method => eat(itemToEat)
@@ -332,6 +332,7 @@ class Zombie{
     this._maxHealth = health;
     this.isAlive = true;
   }
+}
 
 /**
  * Class => FastZombie(health, strength, speed)
@@ -348,13 +349,16 @@ class Zombie{
  * @param {number} speed            The zombie's speed.
  */
 
+class FastZombie extends Zombie{
+  constructor(health, strength, speed){
+    super(health, strength, speed);
+  }
+}
 
 /**
  * FastZombie Extends Zombie Class
  * -----------------------------
  */
-
-
 
 /**
  * Class => StrongZombie(health, strength, speed)
@@ -424,7 +428,7 @@ class Zombie{
  */
 
 //CLOSE ZOMBIE CLASS
-}
+
 
 
 /**
