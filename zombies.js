@@ -323,6 +323,15 @@ class Player{
  * @property {boolean} isAlive      Default value should be `true`.
  */
 
+class Zombie{
+  constructor(health, strength, speed){
+    this.name = Zombie;
+    this.health = health;
+    this.strength = strength;
+    this.speed = speed;
+    this._maxHealth = health;
+    this.isAlive = true;
+  }
 
 /**
  * Class => FastZombie(health, strength, speed)
@@ -414,7 +423,8 @@ class Player{
  * -----------------------------
  */
 
-
+//CLOSE ZOMBIE CLASS
+}
 
 
 /**
