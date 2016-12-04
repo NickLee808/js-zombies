@@ -427,6 +427,11 @@ class RangedZombie extends Zombie{
  * @param {number} speed            The zombie's speed.
  */
 
+class ExplodingZombie extends Zombie{
+  constructor(health, strength, speed){
+    super(health, strength, speed);
+  }
+}
 
 /**
  * ExplodingZombie Extends Zombie Class
@@ -434,8 +439,6 @@ class RangedZombie extends Zombie{
  */
 
 //CLOSE ZOMBIE CLASS
-
-
 
 /**
  * Sample run.
