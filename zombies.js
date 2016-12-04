@@ -148,15 +148,15 @@ class Player{
    * @return {boolean} true/false     Whether player was able to store item in pack.
    */
 
-   takeItem(item){
+  takeItem(item){
     if (this._pack.length < 3){
       console.log(this.name + " picked up " + item.name + ".");
       this._pack.push(item);
     }else{
-      console.log(this.name + " cannot pick up " + item.name + ". PACK IS FULL.");
+      console.log(this.name + " cannot pick up " + item.name + ". Pack full.");
       return false;
     }
-   }
+  }
 
   /**
    * Player Class Method => discardItem(item)
@@ -184,6 +184,16 @@ class Player{
    * @return {boolean} true/false     Whether player was able to remove item from pack.
    */
 
+  discardItem(item){
+    if (this._pack.indexOf(item) !== -1){
+      this._pack.splice(this._pack.indexOf(item), 1);
+      console.log(this.name + " discareded " + item.name + ".");
+      return true;
+    }else{
+      console.log(item.name + " not found.");
+      return false;
+    }
+  }
 
   /**
    * Player Class Method => equip(itemToEquip)
