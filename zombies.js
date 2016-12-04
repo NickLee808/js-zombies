@@ -126,7 +126,9 @@ class Player{
    * @name checkPack
    */
 
-
+   checkPack(){
+    console.log(this._pack.toString());
+   }
 
   /**
    * Player Class Method => takeItem(item)
