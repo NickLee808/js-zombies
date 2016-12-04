@@ -110,6 +110,10 @@ class Player{
     return this._pack;
   }
 
+  getMaxHealth(){
+    return this._maxHealth;
+  }
+
   /**
    * Player Class Method => checkPack()
    * -----------------------------
@@ -121,6 +125,7 @@ class Player{
    *
    * @name checkPack
    */
+
 
 
   /**
