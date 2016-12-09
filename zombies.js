@@ -8,6 +8,11 @@
  * @property {string} name
  */
 
+class Item {
+  constructor (name){
+    this.name = name;
+  }
+}
 
 /**
  * Class => Weapon(name, damage)
@@ -359,3 +364,14 @@ function runGame() {
   // console.log("After health: " + player.health);
   // player.checkPack();
 }
+
+
+
+
+
+
+
+
+module.exports = {
+  item: Item,
+};
